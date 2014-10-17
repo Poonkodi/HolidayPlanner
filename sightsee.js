@@ -202,4 +202,62 @@ function addAllSight(divname) {
 
 
 //=============Flights====================
+
+function randtime() {
+    var d = Math.floor((Math.random() * 100) % 30);
+    var mm = Math.floor((Math.random() * 100) % 12);
+    return d + ":"+ mm + " pm";
+}
+
+function addFlightInfo() {
+var parent = document.createElement('div');
+    parent.innerHTML = ("<br><br>\n");
+    var price=("$" + randint(500,1000)).bold();
+    var str1= " per person <br>\n  ";
+parent.appendChild(addElement(price,''));
+    parent.appendChild(addElement(str1.fontsize(2),''));
+    parent.appendChild(addButton('Add Flight','' ));
+    return parent;
+}
+
+function addLocationWithTime(loc) {
+    var parent = document.createElement('div');
+    parent.setAttribute('class', '');
+    parent.appendChild(addElement(loc,''));
+    var d = Math.floor((Math.random() * 100) % 30);
+    var mm = Math.floor((Math.random() * 100) % 12);
+  // var date = Date.currentDate();
+   
+    
+    parent.appendChild(addElement('2014/'+ mm + "/"+d, 'date'));
+
+    var h = Math.floor((Math.random() * 100) % 24);
+    var m = Math.floor((Math.random() * 100) % 60);
+
+    parent.appendChild(addElement(h + ':' + m, 'time'));
+    return parent;
+}
+
+function addFlightFromJson(parent_name,flight_json) {
+    var divparent = document.getElementById(parent_name);
+    var parent = document.createElement('div');
+    parent.setAttribute('id', 'flight2');
+    var c = addCols(parent, ['', '','','']);
+    c[0].appendChild(addTextLogo('', flight_json.logo));
+   /* var rs = addRows(c[1],[flight_json.name.bold(),flight_json.styledrating, flight_json.        description.fontsize(2),flight_json.Openinghours]);*/
+    addRows(c[1], ['','San Francisco', randtime().bold()]);
+    addRows(c[2], ['','New Yrok', randtime().bold()]);
+     c[3].appendChild(addFlightInfo());
+    divparent.appendChild(parent);
+return parent;
+}
+
+function addAllFlights(divname) {
+     var n=5;
+     var flight_json = JSON.parse(flightdata);
+     for (var i = 0; i < n; i++) {
+         addFlightFromJson(divname,flight_json[i]);
+     }
+}
+
 //============= HOTELS====================

@@ -15,7 +15,7 @@ var flightdata = '[\
 "description" : "Sophistication with an Asian flair and an indoor pool near     Union Square ",\
 "reviews" : "Trip Advisor Reviews : 252",\
 "view":"Currently 52 people are viewing this hotel",\
-"logo":"./flight2.jpg",\
+"logo":"./flight2.png",\
 "partners":[{"logo":"./Kayaklogo.png","price":"140$"},{"logo":"./Triplogo.png", "price":"142$"}]\
 },\
 {"name" : "Hyatt Regency",\
@@ -33,7 +33,7 @@ var flightdata = '[\
 "description" : "Sophistication with an Asian flair and an indoor pool ",\
 "reviews" : "Trip Advisor Reviews : 252",\
 "view":"Currently 52 people are viewing this hotel",\
-"logo":"./flight4.png",\
+"logo":"./flight4.gif",\
 "partners":[{"logo":"./Kayaklogo.png","price":"140$"},{"logo":"./Triplogo.png", "price":"142$"}]\
 }\
 ]'

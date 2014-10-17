@@ -18,14 +18,6 @@ var Carlogos=[
 
 ];
 
-var sightlogos=[
-"http://www.crimemuseum.org/wp-content/uploads/2014/06/alcatraz.jpg",
-"http://www.crimemuseum.org/wp-content/uploads/2014/06/alcatraz.jpg",
-"http://www.crimemuseum.org/wp-content/uploads/2014/06/alcatraz.jpg",
-"http://www.crimemuseum.org/wp-content/uploads/2014/06/alcatraz.jpg",
-"http://www.crimemuseum.org/wp-content/uploads/2014/06/alcatraz.jpg"
-
-];
 
 
 
@@ -246,7 +238,7 @@ function addFlightFromJson(parent_name,flight_json) {
     c[0].appendChild(addTextLogo('', flight_json.logo));
    /* var rs = addRows(c[1],[flight_json.name.bold(),flight_json.styledrating, flight_json.        description.fontsize(2),flight_json.Openinghours]);*/
     addRows(c[1], ['','San Francisco', randtime().bold()]);
-    addRows(c[2], ['','New Yrok', randtime().bold()]);
+    addRows(c[2], ['','New York', randtime().bold()]);
      c[3].appendChild(addFlightInfo());
     divparent.appendChild(parent);
 return parent;
@@ -260,4 +252,39 @@ function addAllFlights(divname) {
      }
 }
 
-//============= HOTELS====================
+//=============Cars====================
+
+function addCarInfo(partnerinfo) {
+    var parent = document.createElement('div');
+    parent.innerHTML = ("<br><br>\n").bold();
+    parent.appendChild(addElement(partnerinfo[0].link.fontsize(2),''));
+    parent.appendChild(addElement(partnerinfo[1].link.fontsize(2),''));
+    var str="From";
+    parent.appendChild(addElement(str.fontsize(2),''));
+    var price=("$" + randint(50,100)).bold();
+    var str1= price + " <br> per day <br>\n  ";
+    parent.appendChild(addElement(str1.fontsize(2),''));
+        parent.appendChild(addButton('Add Car','' ));
+        return parent;
+}
+
+function addCarFromJson(parent_name,car_json) {
+    var divparent = document.getElementById(parent_name);
+    var parent = document.createElement('div');
+    parent.setAttribute('id', 'car');
+    var c = addCols(parent, ['','','']);
+    c[0].appendChild(addTextLogo('',car_json.logo));
+    var rs = addRows(c[1],[car_json.name.bold(),car_json.styledrating, car_json.description.fontsize(2)]);
+    c[2].appendChild(addCarInfo(car_json.partners));
+    divparent.appendChild(parent);
+    return parent;
+}
+
+function addAllCars(divname) {
+     var n=5;
+    var car_json = JSON.parse(cardata);
+     for (var i = 0; i < n; i++) {
+         addCarFromJson(divname,car_json[i]);
+     }
+}
+

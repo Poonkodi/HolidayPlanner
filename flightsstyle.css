@@ -196,7 +196,7 @@ padding:1.5%;
 
 
 #flight2 {
-height:100px;
+height:140px;
 width:700px;
 
 margin:0px auto;
@@ -209,7 +209,19 @@ padding:1.5%;
 
 }
 
+#car{
+height:140px;
+width:700px;
 
+margin:0px auto;
+display: flex;
+flex:1;
+border: 1px transparent green;
+padding:1.5%;
+        vertical-align: middle;
+                box-shadow: 5px 5px 5px #888888;
+
+                }
 #hotel {
 height:200px;
 width:700px;

@@ -161,6 +161,23 @@ function addAllHotels(divname) {
 }
 
 //=============sightseeing====================
+function randint(start, stop) {
+    return Math.floor((Math.random()*1000)%(stop - start)+start);
+}
+
+function addSightInfo(partnerinfo) {
+    var parent = document.createElement('div');
+    parent.innerHTML = ("<br><br>\n").bold();
+    parent.appendChild(addElement(partnerinfo[0].link.fontsize(2),''));
+        parent.appendChild(addElement(partnerinfo[1].link.fontsize(2),''));
+    var str="From";
+    parent.appendChild(addElement(str.fontsize(2),''));
+    var price=("$" + randint(50,100)).bold();
+    var str1= price + " <br> per person <br>\n  ";
+    parent.appendChild(addElement(str1.fontsize(2),''));
+        parent.appendChild(addButton('Add Trip','' ));
+        return parent;
+}
 
 function addSightFromJson(parent_name,sight_json) {
     var divparent = document.getElementById(parent_name);
@@ -169,18 +186,18 @@ function addSightFromJson(parent_name,sight_json) {
     var c = addCols(parent, ['', '', '']);
     c[0].appendChild(addTextLogo(sight_json.name, sight_json.logo));
 
-    var rs = addRows(c[1],[sight_json.name.bold(),sight_json.styledrating,sight_json.rating.bold(), sight_json.description.fontsize(2),sight_json.reviews,sight_json.view]);
-    c[2].appendChild(addPartnerInfo(sight_json.partners));
+    var rs = addRows(c[1],[sight_json.name.bold(),sight_json.styledrating, 'Show on map',sight_json.description.fontsize(2),sight_json.Openinghours]);
+    c[2].appendChild(addSightInfo(sight_json.partners));
     divparent.appendChild(parent);
     return parent;
 }
 
 function addAllSight(divname) {
-    var n=5;
-    var sight_json = JSON.parse(sightseedata);
-    for (var i = 0; i < n; i++) {
-        addSightFromJson(divname,sight_json[i]);
-    }
+     var n=5;
+    var sight_json = JSON.parse(sightdata);
+     for (var i = 0; i < n; i++) {
+         addSightFromJson(divname,sight_json[i]);
+     }
 }
 
 

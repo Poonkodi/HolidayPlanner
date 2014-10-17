@@ -1,39 +1,30 @@
 // JavaScript Document
 var sightdata = '[\
-{"name" : "Hotel Riviera",\
+{"name" : "The golden gate bridge",\
 "styledrating":"★★★☆☆ 3.1/5",\
-"rating" : "#12 of 236 Hotels in San Francisco",\
-"description" : "Sophistication with an Asian flair and an indoor pool near Union Square ",\
-"reviews" : "Trip Advisor Reviews : 252",\
-"view":"Currently 52 people are viewing this hotel",\
-"logo":"./hotel1.jpg",\
-"partners":[{"logo":"./Kayaklogo.png","price":"140$"},{"logo":"./Triplogo.png","price":"142$"}]\
+"description" : "One of  the most famous bridge in the world, this is an absolute must-see in San Francisco",\
+"logo":"./sight1.jpg",\
+"Openinghours":"",\
+"partners":[{"link":"Visit : www.goldengate.org"},{"link":"Visit : en.wikipedia.org/wiki/Golden_Gate"}]\
 },\
-{"name" : "Hotel Annecresco",\
+{"name" : "Alcatraz",\
 "styledrating":"★★★☆☆ 3.4/5",\
-"rating" : "#46 of 236 Hotels in San Francisco",\
-"description" : "Sophistication with an Asian flair and an indoor pool near     Union Square ",\
-"reviews" : "Trip Advisor Reviews : 252",\
-"view":"Currently 52 people are viewing this hotel",\
-"logo":"./hotel2.jpg",\
-"partners":[{"logo":"./Kayaklogo.png","price":"140$"},{"logo":"./Triplogo.png", "price":"142$"}]\
+"description" : "The well-known Alcatraz used to function as a prison with famous prisoners like Al Capone. ",\
+"logo":"./sight2.jpg",\
+"Openinghours":"",\
+"partners":[{"link":"Visit : www.alcatraz.org"},{"link":"Visit : en.wikipedia.org/wiki/Alcatraz"}]\
 },\
-{"name" : "Hyatt Regency",\
+{"name" : "Cable car",\
 "styledrating":"★★★☆☆ 4.1/5",\
-"rating" : "#32 of 236 Hotels in San Francisco",\
 "description" : "Refined and well rounded accommodation on the northeast edge of the peninsula",\
-"reviews" : "Trip Advisor Reviews : 1352",\
-"view":"Currently 45 people are viewing this hotel",\
-"logo":"./hotel3.jpg",\
-"partners":[{"logo":"./Kayaklogo.png","price":"140$"},{"logo":"./Triplogo.png", "price":"142$"}]\
+"logo":"./sight3.jpg",\
+"Openinghours":"Mon-Fri 9:00AM to 4:00PM",\
+"partners":[{"link":"Visit : www.cablecar.org"},{"link":"Visit : en.wikipedia.org/wiki/Cablecar"}]\
 },\
-{"name" : "Marriot Waterfront Hotel",\
+{"name" : "Pier39",\
 "styledrating":"★★★☆☆ 4.1/5",\
-"rating" : "#2 of 236 Hotels in San Francisco",\
 "description" : "Sophistication with an Asian flair and an indoor pool ",\
-"reviews" : "Trip Advisor Reviews : 252",\
-"view":"Currently 52 people are viewing this hotel",\
-"logo":"./hotel5.jpg",\
-"partners":[{"logo":"./Kayaklogo.png","price":"140$"},{"logo":"./Triplogo.png", "price":"142$"}]\
-}\
-]'
+"logo":"./sight4.jpg",\
+"Openinghours":"",\
+"partners":[{"link":"Visit : www.pier39.org"},{"link":"Visit : en.wikipedia.org/wiki/Pier39"}]\
+}]'
